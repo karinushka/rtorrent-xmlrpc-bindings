@@ -112,6 +112,12 @@ d_op_const!(
     "completed_bytes"
 );
 d_op_const!(
+    /// Get the 'creation date' field of a download (as a timestamp).
+    CREATION_DATE,
+    i64,
+    "creation_date"
+);
+d_op_const!(
     /// The number of bytes that have yet to be downloaded.
     LEFT_BYTES,
     i64,
@@ -149,6 +155,13 @@ d_op_const!(
 );
 d_op_const!(IS_OPEN, bool, "is_open");
 d_op_const!(IS_CLOSED, bool, "is_closed");
+d_op_const!(
+    /// Get timestamp the torrent was loaded (or rtorrent was restarted, whichever is more
+    /// recent).
+    LOAD_DATE,
+    i64,
+    "load_date"
+);
 d_op_const!(
     /// The metafile from which this download was created.
     LOADED_FILE,
